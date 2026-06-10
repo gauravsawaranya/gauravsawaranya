@@ -1,16 +1,40 @@
-## Hi there 👋
+# Hi, I'm Gaurav Sawaranya 👋
 
-<!--
-**gauravsawaranya/gauravsawaranya** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Independent Cybersecurity Researcher
 
-Here are some ideas to get you started:
+Helping Improve Digital Security Through Responsible Research and Vulnerability Disclosure.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### About Me
+
+I am an independent cybersecurity researcher with a strong interest in web application security, vulnerability assessment, and responsible disclosure.
+
+My focus is on identifying security weaknesses, promoting secure digital practices, and contributing to a safer digital ecosystem through ethical research and continuous learning.
+
+### Areas of Interest
+
+* Web Application Security
+* Vulnerability Assessment
+* Responsible Disclosure
+* Linux & Network Security
+* Cybersecurity Research
+
+### Tools & Technologies
+
+* Kali Linux
+* Burp Suite
+* OWASP ZAP
+* Nmap
+* Wireshark
+* Git & GitHub
+
+### Current Focus
+
+* Python Programming
+* Linux Administration
+* Web Security Testing
+* Networking Fundamentals
+
+### Connect With Me
+
+* LinkedIn
+* Portfolio Website
