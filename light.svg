@@ -1,0 +1,443 @@
+<svg width="1180" height="610" viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      .skill-pill { transition: transform 0.25s ease; cursor: pointer; }
+      .skill-pill:hover { transform: scale(1.08); }
+      .skill-pill:hover rect { filter: url(#pillGlowHover); }
+      .social-icon { transition: transform 0.25s ease; cursor: pointer; }
+      .social-icon:hover { transform: scale(1.15); }
+    </style>
+
+    <clipPath id="roundedCanvas">
+      <rect x="0" y="0" width="1180" height="610" rx="26"/>
+    </clipPath>
+
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#10B981"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;200%;100%" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="asciiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" values="0 0.5 0.5;360 0.5 0.5" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="shimmerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(15,23,42,0.08)" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="rgba(15,23,42,0.08)" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1.5 0;1.5 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowEmerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="asciiGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0.6" result="b">
+        <animate attributeName="stdDeviation" values="0.4;1.1;0.4" dur="3s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="pillGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.4" result="b">
+        <animate attributeName="stdDeviation" values="1;2.4;1" dur="3.4s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="pillGlowHover" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="noiseFilter" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.02 0"/>
+    </filter>
+
+    <clipPath id="leftPanelClip">
+      <rect x="20" y="20" width="410" height="570" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="1180" height="610" rx="26" fill="url(#bgGrad)"/>
+
+  <g clip-path="url(#roundedCanvas)">
+    <circle cx="150" cy="110" r="190" fill="url(#glowBlue)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;40,25;0,0" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="140" r="220" fill="url(#glowPurple)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-35,30;0,0" dur="16s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="560" r="200" fill="url(#glowEmerald)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;25,-30;0,0" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <rect width="1180" height="610" filter="url(#noiseFilter)"/>
+    
+    <circle cx="60" cy="40" r="1.4" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="6s" begin="0.0s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;20,-30" dur="6s" begin="0.0s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="157" cy="213" r="2.0" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="7s" begin="0.6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;30,-42" dur="7s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="254" cy="386" r="2.5999999999999996" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="8s" begin="1.2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;40,-54" dur="8s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="351" cy="559" r="1.4" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="9s" begin="1.7999999999999998s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;50,-30" dur="9s" begin="1.7999999999999998s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="448" cy="192" r="2.0" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="10s" begin="2.4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;20,-42" dur="10s" begin="2.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="545" cy="365" r="2.5999999999999996" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="6s" begin="3.0s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;30,-54" dur="6s" begin="3.0s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="642" cy="538" r="1.4" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="7s" begin="3.5999999999999996s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;40,-30" dur="7s" begin="3.5999999999999996s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="739" cy="171" r="2.0" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="8s" begin="4.2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;50,-42" dur="8s" begin="4.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="836" cy="344" r="2.5999999999999996" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="9s" begin="4.8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;20,-54" dur="9s" begin="4.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="933" cy="517" r="1.4" fill="#2563EB" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="10s" begin="5.3999999999999995s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;30,-30" dur="10s" begin="5.3999999999999995s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- LEFT: ASCII PORTRAIT PANEL -->
+  <g>
+    <rect x="20" y="20" width="410" height="570" rx="20" fill="#F8FAFC" fill-opacity="0.55"/>
+    <rect x="20" y="20" width="410" height="570" rx="20" fill="none" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+    <rect x="20" y="20" width="410" height="570" rx="20" fill="none" stroke="url(#shimmerGrad)" stroke-width="1.4"/>
+    <rect x="20" y="20" width="410" height="90" rx="20" fill="url(#glassGrad)" clip-path="url(#leftPanelClip)"/>
+
+    <g clip-path="url(#leftPanelClip)">
+      <text x="45" y="52" font-family="'SFMono-Regular',Consolas,monospace" font-size="12" fill="#475569" opacity="0">
+        // portrait.ascii
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.2s" fill="freeze"/>
+      </text>
+
+      <g transform="translate(0,0)">
+        <animateTransform attributeName="transform" type="translate" values="0,-5;0,5;0,-5" dur="7s" repeatCount="indefinite" additive="sum"/>
+        <text x="225" y="78" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░░░░░▒▒▓▓▓▓▓▓▓▓▓▒▒░░░░░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.0;0.018;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.018;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="93" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░░▒▓▓███████████████▓▓▒░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.042;0.06;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.06;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="108" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░▒▓██████████████████████▓▒<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.084;0.102;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.102;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="123" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">▓█████▓▓░░░░░░░░░▓▓█████▓<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.126;0.144;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.144;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="138" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">██████░░   ░░   ░░██████<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.168;0.186;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.186;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="153" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">██████░░   ░░   ░░██████<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.21;0.228;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.228;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="168" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">▓█████████████████████████▓<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.252;0.27;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.27;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="183" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░▓████▓▓▓▓░░░░░▓▓▓▓████▓░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.294;0.312;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.312;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="198" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░░▓█████████████████████▓░░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.336;0.354;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.354;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="213" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░░░▓█████████████████████▓░░░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.378;0.396;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.396;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="228" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░░░░▓███████████████████▓░░░░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.42;0.438;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.438;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="243" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░░░▒▓█████████████████████▓▒░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.462;0.48;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.48;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="258" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░░▓█████████████████████████▓░░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.504;0.522;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.522;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="273" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">░▓█████████████████████████████▓░<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.546;0.564;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.564;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+    <text x="225" y="288" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="12.5" letter-spacing="1" fill="url(#asciiGrad)" opacity="0" filter="url(#asciiGlow)">▓█████████████████████████████████▓<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.588;0.606;1" dur="10.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,3;0,0;0,0" keyTimes="0;0.606;1" dur="10.0s" repeatCount="indefinite" additive="sum"/></text>
+
+        <text x="45" y="345" font-family="'SFMono-Regular',Consolas,monospace" font-size="13" fill="#475569" opacity="0">$ whoami<animate attributeName="opacity" values="0;1" dur="0.01s" begin="4.8s" fill="freeze"/></text>
+        <text x="45" y="368" font-family="'SFMono-Regular',Consolas,monospace" font-size="13.5" font-weight="700" fill="url(#accentGrad)" opacity="0">&gt; Gaurav Sawaranya<animate attributeName="opacity" values="0;1" dur="0.01s" begin="5.3s" fill="freeze"/></text>
+        <text x="45" y="391" font-family="'SFMono-Regular',Consolas,monospace" font-size="13" fill="#475569" opacity="0">$ role<animate attributeName="opacity" values="0;1" dur="0.01s" begin="5.8s" fill="freeze"/></text>
+        <text x="45" y="414" font-family="'SFMono-Regular',Consolas,monospace" font-size="13.5" font-weight="700" fill="url(#accentGrad)" opacity="0">&gt; Cybersecurity Researcher<animate attributeName="opacity" values="0;1" dur="0.01s" begin="6.3s" fill="freeze"/></text>
+        <text x="45" y="437" font-family="'SFMono-Regular',Consolas,monospace" font-size="13" fill="#475569" opacity="0">$ focus<animate attributeName="opacity" values="0;1" dur="0.01s" begin="6.8s" fill="freeze"/></text>
+        <text x="45" y="460" font-family="'SFMono-Regular',Consolas,monospace" font-size="13.5" font-weight="700" fill="url(#accentGrad)" opacity="0">&gt; Web App Security<animate attributeName="opacity" values="0;1" dur="0.01s" begin="7.3s" fill="freeze"/></text>
+        <text x="45" y="483" font-family="'SFMono-Regular',Consolas,monospace" font-size="13" fill="#475569" opacity="0">$ mission<animate attributeName="opacity" values="0;1" dur="0.01s" begin="7.8s" fill="freeze"/></text>
+        <text x="45" y="506" font-family="'SFMono-Regular',Consolas,monospace" font-size="13.5" font-weight="700" fill="url(#accentGrad)" opacity="0">&gt; Responsible Disclosure<animate attributeName="opacity" values="0;1" dur="0.01s" begin="8.3s" fill="freeze"/></text>
+        <rect x="229" y="494" width="8" height="14" fill="#06B6D4" opacity="0"><animate attributeName="opacity" values="1;0;1" dur="1s" begin="8.8s" repeatCount="indefinite"/></rect>
+      </g>
+
+      <!-- scanline sweep -->
+      <rect x="20" y="20" width="410" height="14" fill="url(#scanGrad)">
+        <animate attributeName="y" values="20;576;20" dur="4.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- RIGHT: TERMINAL PANEL -->
+  <g>
+    <rect x="470" y="20" width="690" height="570" rx="20" fill="#F8FAFC" fill-opacity="0.55"/>
+    <rect x="470" y="20" width="690" height="570" rx="20" fill="none" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+    <rect x="470" y="20" width="690" height="570" rx="20" fill="none" stroke="url(#shimmerGrad)" stroke-width="1.4"/>
+    <rect x="470" y="20" width="690" height="90" rx="20" fill="url(#glassGrad)"/>
+
+    <!-- terminal top bar -->
+    <line x1="470" y1="66" x2="1160" y2="66" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+    <circle cx="500" cy="42" r="6" fill="#FF5F56"/>
+    <circle cx="520" cy="42" r="6" fill="#FFBD2E"/>
+    <circle cx="540" cy="42" r="6" fill="#27C93F"/>
+    <text x="1130" y="47" text-anchor="end" font-family="'SFMono-Regular',Consolas,monospace" font-size="12" fill="#475569">profile.sh</text>
+
+    <!-- greeting -->
+    <text x="500" y="100" font-family="'SFMono-Regular',Consolas,monospace" font-size="24" font-weight="700" fill="#0F172A">
+      Hi <tspan>👋</tspan> I'm <tspan fill="url(#accentGrad)">Gaurav Sawaranya</tspan>
+    </text>
+    <text x="500" y="124" font-family="'SFMono-Regular',Consolas,monospace" font-size="14" fill="#475569">Independent Cybersecurity Researcher</text>
+
+    <!-- rotating role -->
+    <text x="484" y="158" font-family="'SFMono-Regular',Consolas,monospace" font-size="19" fill="#475569">&gt;</text>
+    
+    <clipPath id="roleClip0">
+      <rect x="500" y="138" height="28" width="0">
+        <animate attributeName="width" values="0;304.7;304.7;0;0" keyTimes="0;0.0667;0.17;0.1833;1"
+                 begin="0.0s" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <g clip-path="url(#roleClip0)"><text x="500" y="158" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="19" font-weight="600" fill="url(#accentGrad)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.0667;0.17;0.1833;1" begin="0.0s" dur="15.0s" repeatCount="indefinite"/>Web Application Security</text></g>
+    <rect x="804.7" y="141" width="9" height="20" fill="#06B6D4"><animate attributeName="opacity" values="0;1;0;1;0;1;0;1;0;1;0;0;0" keyTimes="0.0000;0.0667;0.0787;0.0907;0.1027;0.1147;0.1267;0.1387;0.1507;0.1627;0.1700;0.1700;1.0000" begin="0.0s" dur="15.0s" repeatCount="indefinite"/></rect>
+    
+    <clipPath id="roleClip1">
+      <rect x="500" y="138" height="28" width="0">
+        <animate attributeName="width" values="0;304.7;304.7;0;0" keyTimes="0;0.0667;0.17;0.1833;1"
+                 begin="3.0s" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <g clip-path="url(#roleClip1)"><text x="500" y="158" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="19" font-weight="600" fill="url(#accentGrad)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.0667;0.17;0.1833;1" begin="3.0s" dur="15.0s" repeatCount="indefinite"/>Vulnerability Assessment</text></g>
+    <rect x="804.7" y="141" width="9" height="20" fill="#06B6D4"><animate attributeName="opacity" values="0;1;0;1;0;1;0;1;0;1;0;0;0" keyTimes="0.0000;0.0667;0.0787;0.0907;0.1027;0.1147;0.1267;0.1387;0.1507;0.1627;0.1700;0.1700;1.0000" begin="3.0s" dur="15.0s" repeatCount="indefinite"/></rect>
+    
+    <clipPath id="roleClip2">
+      <rect x="500" y="138" height="28" width="0">
+        <animate attributeName="width" values="0;281.2;281.2;0;0" keyTimes="0;0.0667;0.17;0.1833;1"
+                 begin="6.0s" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <g clip-path="url(#roleClip2)"><text x="500" y="158" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="19" font-weight="600" fill="url(#accentGrad)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.0667;0.17;0.1833;1" begin="6.0s" dur="15.0s" repeatCount="indefinite"/>Responsible Disclosure</text></g>
+    <rect x="781.2" y="141" width="9" height="20" fill="#06B6D4"><animate attributeName="opacity" values="0;1;0;1;0;1;0;1;0;1;0;0;0" keyTimes="0.0000;0.0667;0.0787;0.0907;0.1027;0.1147;0.1267;0.1387;0.1507;0.1627;0.1700;0.1700;1.0000" begin="6.0s" dur="15.0s" repeatCount="indefinite"/></rect>
+    
+    <clipPath id="roleClip3">
+      <rect x="500" y="138" height="28" width="0">
+        <animate attributeName="width" values="0;351.8;351.8;0;0" keyTimes="0;0.0667;0.17;0.1833;1"
+                 begin="9.0s" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <g clip-path="url(#roleClip3)"><text x="500" y="158" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="19" font-weight="600" fill="url(#accentGrad)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.0667;0.17;0.1833;1" begin="9.0s" dur="15.0s" repeatCount="indefinite"/>Linux &amp; Network Security</text></g>
+    <rect x="851.8" y="141" width="9" height="20" fill="#06B6D4"><animate attributeName="opacity" values="0;1;0;1;0;1;0;1;0;1;0;0;0" keyTimes="0.0000;0.0667;0.0787;0.0907;0.1027;0.1147;0.1267;0.1387;0.1507;0.1627;0.1700;0.1700;1.0000" begin="9.0s" dur="15.0s" repeatCount="indefinite"/></rect>
+    
+    <clipPath id="roleClip4">
+      <rect x="500" y="138" height="28" width="0">
+        <animate attributeName="width" values="0;281.2;281.2;0;0" keyTimes="0;0.0667;0.17;0.1833;1"
+                 begin="12.0s" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <g clip-path="url(#roleClip4)"><text x="500" y="158" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="19" font-weight="600" fill="url(#accentGrad)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.0667;0.17;0.1833;1" begin="12.0s" dur="15.0s" repeatCount="indefinite"/>Cybersecurity Research</text></g>
+    <rect x="781.2" y="141" width="9" height="20" fill="#06B6D4"><animate attributeName="opacity" values="0;1;0;1;0;1;0;1;0;1;0;0;0" keyTimes="0.0000;0.0667;0.0787;0.0907;0.1027;0.1147;0.1267;0.1387;0.1507;0.1627;0.1700;0.1700;1.0000" begin="12.0s" dur="15.0s" repeatCount="indefinite"/></rect>
+
+    <line x1="500" y1="182" x2="1130" y2="182" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+
+    
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.600;1" dur="0.01s" begin="0.6s" fill="freeze"/>
+      <text x="500" y="208" font-family="'SFMono-Regular',Consolas,monospace" font-size="14" fill="#475569">📍
+        <tspan dx="10" fill="#475569">Location:</tspan>
+        <tspan dx="8" fill="#0F172A">Bihar, India</tspan>
+      </text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.950;1" dur="0.01s" begin="0.95s" fill="freeze"/>
+      <text x="500" y="238" font-family="'SFMono-Regular',Consolas,monospace" font-size="14" fill="#475569">🎓
+        <tspan dx="10" fill="#475569">Education:</tspan>
+        <tspan dx="8" fill="#0F172A">B.Sc Chemistry (Pursuing) · Self-taught Ethical Hacking</tspan>
+      </text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.990;1" dur="0.01s" begin="1.2999999999999998s" fill="freeze"/>
+      <text x="500" y="268" font-family="'SFMono-Regular',Consolas,monospace" font-size="14" fill="#475569">🎯
+        <tspan dx="10" fill="#475569">Current Focus:</tspan>
+        <tspan dx="8" fill="#0F172A">Python Programming, Linux Admin, Web Security Testing</tspan>
+      </text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.990;1" dur="0.01s" begin="1.65s" fill="freeze"/>
+      <text x="500" y="298" font-family="'SFMono-Regular',Consolas,monospace" font-size="14" fill="#475569">🏆
+        <tspan dx="10" fill="#475569">Cert in Hall of Fame:</tspan>
+        <tspan dx="8" fill="#0F172A">Multiple Programs</tspan>
+      </text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.990;1" dur="0.01s" begin="2.0s" fill="freeze"/>
+      <text x="500" y="328" font-family="'SFMono-Regular',Consolas,monospace" font-size="14" fill="#475569">🔍
+        <tspan dx="10" fill="#475569">Interests:</tspan>
+        <tspan dx="8" fill="#0F172A">Web App Security, Vuln. Assessment, Network Security</tspan>
+      </text>
+    </g>
+
+    <line x1="500" y1="358" x2="1130" y2="358" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+    <text x="500" y="380" font-family="'SFMono-Regular',Consolas,monospace" font-size="14" font-weight="700" fill="#0F172A">Skills</text>
+
+    
+    <g class="skill-pill" style="transform-origin:556.0px 412px">
+      <rect x="500" y="395" width="112" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.000;1" dur="0.01s" begin="0.0s" fill="freeze"/>
+      </rect>
+      <text x="556.0" y="417" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.0s" fill="freeze"/>
+        Kali Linux
+      </text>
+    </g>
+
+    <g class="skill-pill" style="transform-origin:678.0px 412px">
+      <rect x="622" y="395" width="112" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.025;1" dur="0.01s" begin="0.15s" fill="freeze"/>
+      </rect>
+      <text x="678.0" y="417" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.15s" fill="freeze"/>
+        Burp Suite
+      </text>
+    </g>
+
+    <g class="skill-pill" style="transform-origin:796.0px 412px">
+      <rect x="744" y="395" width="104" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.050;1" dur="0.01s" begin="0.3s" fill="freeze"/>
+      </rect>
+      <text x="796.0" y="417" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.3s" fill="freeze"/>
+        OWASP ZAP
+      </text>
+    </g>
+
+    <g class="skill-pill" style="transform-origin:891.5px 412px">
+      <rect x="858" y="395" width="67" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.075;1" dur="0.01s" begin="0.44999999999999996s" fill="freeze"/>
+      </rect>
+      <text x="891.5" y="417" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.44999999999999996s" fill="freeze"/>
+        Nmap
+      </text>
+    </g>
+
+    <g class="skill-pill" style="transform-origin:987.0px 412px">
+      <rect x="935" y="395" width="104" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.100;1" dur="0.01s" begin="0.6s" fill="freeze"/>
+      </rect>
+      <text x="987.0" y="417" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.6s" fill="freeze"/>
+        Wireshark
+      </text>
+    </g>
+
+    <g class="skill-pill" style="transform-origin:541.0px 458px">
+      <rect x="500" y="441" width="82" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.125;1" dur="0.01s" begin="0.75s" fill="freeze"/>
+      </rect>
+      <text x="541.0" y="463" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.75s" fill="freeze"/>
+        Python
+      </text>
+    </g>
+
+    <g class="skill-pill" style="transform-origin:629.5px 458px">
+      <rect x="592" y="441" width="75" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.150;1" dur="0.01s" begin="0.8999999999999999s" fill="freeze"/>
+      </rect>
+      <text x="629.5" y="463" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.8999999999999999s" fill="freeze"/>
+        Linux
+      </text>
+    </g>
+
+    <g class="skill-pill" style="transform-origin:755.0px 458px">
+      <rect x="677" y="441" width="156" height="34" rx="17" fill="rgba(15,23,42,0.02)"
+            stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#pillGlow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.175;1" dur="0.01s" begin="1.05s" fill="freeze"/>
+      </rect>
+      <text x="755.0" y="463" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace"
+            font-size="13" fill="#0F172A" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.01s" begin="1.05s" fill="freeze"/>
+        Git &amp; GitHub
+      </text>
+    </g>
+
+    <line x1="500" y1="495" x2="1130" y2="495" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
+
+    <!-- social icons -->
+    <a xlink:href="https://github.com/gauravsawaranya" target="_blank" rel="noopener"><g class="social-icon" style="transform-origin:499px 525px"><title>GitHub</title><circle cx="499" cy="525" r="19" fill="#F8FAFC" stroke="url(#accentGrad)" stroke-width="1.3" filter="url(#softGlow)"><animate attributeName="r" values="19;21;19" dur="3s" begin="0s" repeatCount="indefinite"/></circle><path transform="translate(490,516) scale(0.75)" fill="#0F172A" d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.4-5.27 5.68.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></g></a><a xlink:href="https://linkedin.com/in/gauravsawaranya" target="_blank" rel="noopener"><g class="social-icon" style="transform-origin:559px 525px"><title>LinkedIn</title><circle cx="559" cy="525" r="19" fill="#F8FAFC" stroke="url(#accentGrad)" stroke-width="1.3" filter="url(#softGlow)"><animate attributeName="r" values="19;21;19" dur="3s" begin="0.3s" repeatCount="indefinite"/></circle><path transform="translate(550,516) scale(0.75)" fill="#0F172A" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.24 8.25h4.5V23H.24V8.25ZM8.06 8.25h4.31v2.01h.06c.6-1.13 2.07-2.33 4.26-2.33 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.72c0-1.6-.03-3.66-2.23-3.66-2.23 0-2.57 1.74-2.57 3.55V23h-4.5V8.25Z"/></g></a><a xlink:href="https://twitter.com/gauravsawaranya" target="_blank" rel="noopener"><g class="social-icon" style="transform-origin:619px 525px"><title>Twitter / X</title><circle cx="619" cy="525" r="19" fill="#F8FAFC" stroke="url(#accentGrad)" stroke-width="1.3" filter="url(#softGlow)"><animate attributeName="r" values="19;21;19" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle><path transform="translate(610,516) scale(0.75)" fill="#0F172A" d="M23 4.37c-.83.37-1.72.62-2.66.73a4.64 4.64 0 0 0 2.04-2.57c-.9.53-1.89.92-2.95 1.13a4.62 4.62 0 0 0-7.87 4.21A13.12 13.12 0 0 1 1.64 3.16a4.62 4.62 0 0 0 1.43 6.17 4.6 4.6 0 0 1-2.1-.58v.06a4.63 4.63 0 0 0 3.7 4.53c-.5.14-1.03.16-1.57.06a4.63 4.63 0 0 0 4.32 3.21A9.28 9.28 0 0 1 0 18.57 13.08 13.08 0 0 0 7.08 20.6c8.5 0 13.15-7.04 13.15-13.15l-.02-.6c.9-.65 1.68-1.46 2.3-2.38-.83.37-1.72.62-2.66.73"/></g></a><a xlink:href="https://facebook.com/gauravsawaranya" target="_blank" rel="noopener"><g class="social-icon" style="transform-origin:679px 525px"><title>Facebook</title><circle cx="679" cy="525" r="19" fill="#F8FAFC" stroke="url(#accentGrad)" stroke-width="1.3" filter="url(#softGlow)"><animate attributeName="r" values="19;21;19" dur="3s" begin="0.9s" repeatCount="indefinite"/></circle><path transform="translate(670,516) scale(0.75)" fill="#0F172A" d="M23.5 12.07C23.5 5.68 18.32.5 11.93.5S.36 5.68.36 12.07c0 5.77 4.23 10.56 9.75 11.43v-8.08H7.13v-3.35h2.98V9.49c0-2.94 1.75-4.57 4.43-4.57 1.29 0 2.63.23 2.63.23v2.89h-1.48c-1.46 0-1.92.91-1.92 1.84v2.2h3.27l-.52 3.35h-2.75v8.08c5.52-.87 9.75-5.66 9.75-11.44Z"/></g></a><a xlink:href="https://instagram.com/gauravsawaranya" target="_blank" rel="noopener"><g class="social-icon" style="transform-origin:739px 525px"><title>Instagram</title><circle cx="739" cy="525" r="19" fill="#F8FAFC" stroke="url(#accentGrad)" stroke-width="1.3" filter="url(#softGlow)"><animate attributeName="r" values="19;21;19" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle><path transform="translate(730,516) scale(0.75)" fill="#0F172A" fill-rule="evenodd" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.73 3.73 0 0 1-1.38-.9 3.73 3.73 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07ZM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.14C.32 4.9.12 5.77.06 7.05.01 8.33 0 8.74 0 12s.01 3.67.06 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.47 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.63.5 2.91.56C8.33 24 8.74 24 12 24s3.67-.01 4.95-.06c1.28-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.91.05-1.28.06-1.69.06-4.95s-.01-3.67-.06-4.95c-.06-1.28-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.62c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></g></a>
+  </g>
+</svg>
